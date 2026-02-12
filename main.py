@@ -49,7 +49,8 @@ def main():
                 if CircleShape.collides_with(shot, asteroid):
                     log_event("asteroid_shot")
                     pygame.sprite.Sprite.kill(shot)
-                    pygame.sprite.Sprite.kill(asteroid)
+                    # pygame.sprite.Sprite.kill(asteroid)
+                    asteroid.split()
 
         pygame.display.flip()
         clock.tick(60)
